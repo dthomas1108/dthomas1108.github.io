@@ -30,8 +30,8 @@ importers:
         specifier: ^2.5.1
         version: 2.5.1(vue@3.5.22)
       shadcn-nuxt:
-        specifier: 2.3.1
-        version: 2.3.1(magicast@0.3.5)
+        specifier: 2.3.2
+        version: 2.3.2(magicast@0.3.5)
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -2934,8 +2934,8 @@ packages:
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  shadcn-nuxt@2.3.1:
-    resolution: {integrity: sha512-UZ/AOSvZZxDf0WzRRp0w5wJg0R6qpck2oS290wX6DcWN+hHSrxwDpkjoklqrRl7GtVrPYuL/h+cQj/MaRx5spw==}
+  shadcn-nuxt@2.3.2:
+    resolution: {integrity: sha512-lfbYfhJ39XKoNTYcdjFykTNaVxDL3kMexYRTFCYtIMYuad+duusZzpIleiWwio+MksfJw/4Jqo3cAjKDet5SAA==}
 
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -6585,7 +6585,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shadcn-nuxt@2.3.1(magicast@0.3.5):
+  shadcn-nuxt@2.3.2(magicast@0.3.5):
     dependencies:
       '@nuxt/kit': 3.19.3(magicast@0.3.5)
       oxc-parser: 0.93.0
