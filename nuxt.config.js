@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2025-10-07',
   devtools: { enabled: true },
-  srr: false,
+  ssr: false,
   target: 'static',
   css: ['~/assets/css/tailwind.css'],
 
@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   },
 
   app: {
-    baseURL: '/dthomas1108.github.io/',
+    baseURL: '/',
     buildAssetsDir: 'assets'
   },
 
