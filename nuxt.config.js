@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-10-07',
   devtools: { enabled: true },
   srr: false,
+  target: 'static',
   css: ['~/assets/css/tailwind.css'],
 
   vite: {
@@ -24,4 +25,13 @@ export default defineNuxtConfig({
      */
     componentDir: './app/components/ui'
   },
+
+  app: {
+    baseURL: '/dthomas1108.github.io/',
+    buildAssetsDir: 'assets'
+  },
+
+  nitro: {
+    preset: 'github_pages'
+  }
 })
