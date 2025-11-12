@@ -74,7 +74,7 @@
     </section>
 
     <div class="mt-12 text-center">
-      <a href="/cv.pdf" download class="inline-block px-8 py-3 bg-green-500 hover:bg-green-600 text-black font-semibold rounded-lg transition-colors">
+      <a href="/Dylan-Thomas-CV.pdf" download class="inline-block px-8 py-3 bg-green-500 hover:bg-green-600 text-black font-semibold rounded-lg transition-colors">
         Download CV
       </a>
     </div>
