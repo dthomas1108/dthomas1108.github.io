@@ -106,13 +106,13 @@ const featuredProjects = [
     technologies: ['Node.js', 'Discord.js', 'MongoDB', 'PostgreSQL']
   },
   {
-    title: 'AI Support/Chatbot',
+    title: 'AI Powered Support/Chat Application',
     description: 'Real-time chat application with AI-powered responses, intent detection and entity extraction using a multi-stage RAG pipeline.',
     technologies: ['JavaScript', 'OpenAI', 'Pinecone', 'Docker']
   },
   {
-    title: 'Broke By Design Drivers Hub',
-    description: 'Real-time data visualisation and driver/community management system for a virtual trucking community.',
+    title: 'Broke By Design Website & Drivers Hub',
+    description: 'Virtual Trucking Company website with real-time data visualisation and driver/community management system.',
     technologies: ['Nuxt', 'Vue', 'TailwindCSS', 'Supabase']
   }
 ];
