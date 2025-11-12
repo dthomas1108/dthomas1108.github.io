@@ -2,11 +2,11 @@
   <div class="container mx-auto px-4">
     <section class="min-h-[80vh] flex items-center justify-center">
       <div class="max-w-4xl mx-auto text-center justify-center">
-        <img
-            src="/img/Dylan.png"
-            alt="Dylan Thomas"
-            class="w-32 h-32 mx-auto mb-6 rounded-full shadow-lg z-50"
-        />
+<!--        <img-->
+<!--            src="/img/Dylan.png"-->
+<!--            alt="Dylan Thomas"-->
+<!--            class="w-32 h-32 mx-auto mb-6 rounded-full shadow-lg z-50"-->
+<!--        />-->
 
         <h1 class="text-6xl md:text-8xl font-bold">
           Dylan Thomas
