@@ -22,7 +22,7 @@
       <h2 class="text-3xl font-bold mb-6">Education</h2>
       <div class="border border-gray-800 rounded-lg p-6 hover:border-green-500 transition-colors">
         <div class="flex justify-between items-start mb-2">
-          <h3 class="text-xl font-semibold">Software Engineering</h3>
+          <h3 class="text-xl font-semibold">BEng (Hons) Software Design for AI & Cloud Computing</h3>
           <span class="text-gray-500">Expected 2026</span>
         </div>
         <p class="text-gray-400 mb-4">Bachelor of Engineering</p>
@@ -30,6 +30,7 @@
           <ul>
             <li>• Dean's Honours List recipient years 23/24 & 24/25</li>
             <li>• Focus on Full-Stack Development and AI/ML</li>
+            <li>• On track to receive a 2.1 Hons degree</li>
           </ul>
         </div>
       </div>
@@ -59,6 +60,24 @@
       </div>
     </section>
 
+    <section>
+      <h2 class="text-3xl font-bold mb-6">Interests</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div
+            v-for="(interest, index) in interests"
+            :key="index"
+            class="p-4 border border-gray-800 rounded-lg text-center hover:border-gray-500 transition-colors"
+        >
+          <p class="text-gray-400">{{ interest }}</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-12 text-center">
+      <a href="/cv.pdf" download class="inline-block px-8 py-3 bg-green-500 hover:bg-green-600 text-black font-semibold rounded-lg transition-colors">
+        Download CV
+      </a>
+    </div>
   </div>
 </div>
 </template>
@@ -66,19 +85,70 @@
 const skills = [
   {
     name: 'Frontend',
-    items: ['Vue.js', 'Nuxt', 'React', 'Tailwind CSS', 'JavaScript', 'TypeScript']
+    items: [
+      'Vue.js',
+      'Nuxt',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'TailwindCSS',
+      'Bootstrap',
+      'Chart.js'
+    ]
   },
   {
     name: 'Backend',
-    items: ['Node.js', 'Express', 'Python', 'PostgreSQL', 'MongoDB', 'REST APIs']
+    items: [
+      'Node.js',
+      'Express',
+      'Python',
+      'Java',
+      'Spring Boot',
+      'REST APIs',
+      'MongoDB',
+      'PostgreSQL',
+      'MySQL',
+      'PHP',
+    ]
+  },
+  {
+    name: 'AI & Automation',
+    items: [
+      'OpenAI API',
+      'Playwright',
+      'Puppeteer',
+      'Pinecone'
+    ]
   },
   {
     name: 'Tools & Platforms',
-    items: ['Git', 'Docker', 'AWS', 'Vercel', 'GitHub Actions', 'Linux']
+    items: [
+      'Git',
+      'Docker',
+      'Vercel',
+      'Coolify',
+      'Postman'
+    ]
   },
   {
-    name: 'AI & ML',
-    items: ['TensorFlow', 'OpenAI API', 'Natural Language Processing', 'Data Analysis']
+    name: 'Other / CMS',
+    items: [
+      'Notion',
+      'Asana',
+      'WordPress',
+    ]
   }
+];
+
+const interests = [
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Full-Stack Development',
+    'Cloud Architecture',
+    'Data Visualization',
+    'Sports Analytics',
+    'Gaming & Simulation',
+    'API Development',
+    'Database Design'
 ];
 </script>
