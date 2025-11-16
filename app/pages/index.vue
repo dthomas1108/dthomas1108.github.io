@@ -2,12 +2,6 @@
   <div class="container mx-auto px-4">
     <section class="min-h-[80vh] flex items-center justify-center">
       <div class="max-w-4xl mx-auto text-center justify-center">
-<!--        <img-->
-<!--            src="/img/Dylan.png"-->
-<!--            alt="Dylan Thomas"-->
-<!--            class="w-32 h-32 mx-auto mb-6 rounded-full shadow-lg z-50"-->
-<!--        />-->
-
         <h1 class="text-6xl md:text-8xl font-bold">
           Dylan Thomas
         </h1>
@@ -59,8 +53,18 @@
             class="group cursor-pointer"
         >
           <div class="aspect-video bg-gray-900 rounded-lg mb-4 overflow-hidden border border-gray-800 group-hover:border-green-500 transition-all">
-            <div class="w-full h-full flex items-center justify-center text-gray-600">
-              Project Screenshot
+            <div v-if="project.images && project.images.length > 0" class="w-full h-full flex gap-2">
+              <img
+                  v-for="(image, index) in project.images"
+                  :key="index"
+                  :src="image"
+                  :alt="`${project.title} screenshot ${index + 1}`"
+                  class="h-full object-cover"
+                  :class="project.images.length === 1 ? 'w-full' : 'flex-1'"
+              >
+            </div>
+            <div v-else class="w-full h-full flex items-center justify-center text-gray-600">
+              Coming Soon
             </div>
           </div>
           <h3 class="text-xl font-semibold mb-2 group-hover:text-green-500 transition-colors">
@@ -84,6 +88,9 @@
   </div>
 </template>
 <script setup>
+import bbdImage from '@/assets/img/bbd.png';
+import vtImage from '@/assets/img/versatix.png';
+import tgImage from '@/assets/img/telegram-bot.png';
 const expertise = [
   {
     title: 'Full Stack Development',
@@ -103,17 +110,22 @@ const featuredProjects = [
   {
     title: 'Discord & Telegram Bots',
     description: 'Designed smart Discord and Telegram bots with Node.js that handle automation, data storage, and interactive community features.',
-    technologies: ['Node.js', 'Discord.js', 'MongoDB', 'PostgreSQL']
+    technologies: ['Node.js', 'Discord.js', 'MongoDB', 'PostgreSQL'],
+    images: [vtImage, tgImage]
   },
   {
     title: 'AI Powered Support/Chat Application',
     description: 'Real-time chat application with AI-powered responses, intent detection and entity extraction using a multi-stage RAG pipeline.',
-    technologies: ['JavaScript', 'OpenAI', 'Pinecone', 'Docker']
+    technologies: ['JavaScript', 'OpenAI', 'Pinecone', 'Docker'],
+    images: []
   },
   {
     title: 'Broke By Design Website & Drivers Hub',
     description: 'Virtual Trucking Company website with real-time data visualisation and driver/community management system.',
-    technologies: ['Nuxt', 'Vue', 'TailwindCSS', 'Supabase']
+    technologies: ['Nuxt', 'Vue', 'TailwindCSS', 'Supabase'],
+    images: [
+      bbdImage
+    ]
   }
 ];
 </script>

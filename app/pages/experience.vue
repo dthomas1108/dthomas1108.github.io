@@ -45,8 +45,20 @@
               :key="index"
               class="border border-gray-800 rounded-lg overflow-hidden hover:border-green-500 transition-all group"
           >
-            <div class="aspect-video bg-gray-900 flex items-center justify-center border-b border-gray-800">
-              <span class="text-gray-600">Project Preview</span>
+            <div class="aspect-video bg-gray-900 overflow-hidden border-b border-gray-800">
+              <div v-if="project.images && project.images.length > 0" class="w-full h-full flex gap-2">
+                <img
+                    v-for="(image, index) in project.images"
+                    :key="index"
+                    :src="image"
+                    :alt="`${project.title} screenshot ${index + 1}`"
+                    class="h-full object-cover"
+                    :class="project.images.length === 1 ? 'w-full' : 'flex-1'"
+                >
+              </div>
+              <div v-else class="w-full h-full flex items-center justify-center">
+                <span class="text-gray-600">Coming Soon</span>
+              </div>
             </div>
 
             <div class="p-6">
@@ -83,6 +95,10 @@
   </div>
 </template>
 <script setup>
+import bbdImage from '@/assets/img/bbd.png';
+import vtImage from '@/assets/img/versatix.png';
+import tgImage from '@/assets/img/telegram-bot.png';
+
 const workExperience = [
   {
     title: 'Software Engineering Intern -> Part Time Full-Stack Software Engineer',
@@ -117,21 +133,24 @@ const projects = [
     description: 'Custom community management bots featuring moderation systems, automated roles, and AI-powered engagement tools. Discord bots included custom commands and AutoMod capabilities, while Telegram bots leveraged OpenAI for automated polling and scheduled messaging.',
     technologies: ['Node.js', 'Discord.js', 'Telegram Bot API', 'OpenAI API'],
     liveUrl: 'https://versatech.gitbook.io/versatix',
-    githubUrl: null
+    githubUrl: null,
+    images: [vtImage, tgImage]
   },
   {
     title: 'AI Powered Support/Chat Application',
     description: 'Real-time chat application with AI powered responses for sports handicapping e-commerce. Features intent detection, entity extraction, and a multi-stage RAG pipeline with vector database integration to provide personalised package recommendations based on handicapper performance data.',
     technologies: ['HTML/CSS/JS', 'OpenAI API', 'Pinecone', 'Docker', 'RAG Pipeline'],
     liveUrl: null,
-    githubUrl: null
+    githubUrl: null,
+    images: []
   },
   {
     title: 'Broke By Design Website & Drivers Hub',
     description: 'Virtual Trucking Company website with real-time data visualisation and driver/community management system.',
     technologies: ['Nuxt', 'Vue', 'TailwindCSS', 'Supabase'],
     liveUrl: 'https://www.brokebydesign.net/',
-    githubUrl: null
+    githubUrl: null,
+    images: [bbdImage]
   }
 ];
 </script>
